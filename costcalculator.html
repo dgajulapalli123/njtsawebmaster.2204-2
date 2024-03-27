@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>EcoEnergy Solutions</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Spinner Start -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+      <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+          <span class="sr-only">Loading...</span>
+      </div>
+  </div>
+  <!-- Spinner End -->
+
+
+  <!-- Navbar Start -->
+  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
+      <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-lg-5">
+          <h2 class="m-0 text-primary">EcoEnergy Solutions</h2>
+      </a>
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="navbar-nav ms-auto p-4 p-lg-0">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="solutions.html" class="nav-item nav-link">Solutions</a>
+              <a href="practice.html" class="nav-item nav-link">Practices</a>
+              <a href="incentiveandrebates.html" class="nav-item nav-link">Incentives and Rebates</a>
+              <a href="costcalculator.html" class="nav-item nav-link active">Cost Calculator</a>
+              <a href="resources.html" class="nav-item nav-link">Resources</a>
+            <a href="documentation.html" class="nav-item nav-link">References</a>
+          </div>
+          <a href="contact.html" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">Contact Us!<i class="fa fa-arrow-right ms-3"></i></a>
+      </div>
+  </nav>
+  <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5"
+      style="background-image: url('img/renew2.jpeg');">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Free Quote</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Cost Calculator</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Quote Start -->
+    <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
+        <div class="container quote px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.jpg" style="object-fit: cover;" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 pe-lg-0">
+                        <h6 class="text-primary">Free Solar Panel Quote</h6>
+                        <h1 class="mb-4">Get A Free Quote!</h1>
+                        <p class="mb-4 pb-2">Enter in the following fields to get your estimated solar panel cost installation. <br> Note: <br> -> Sunlight hours is the average number of hours of sun <br> -> Commercial solar panels are generally 15-20% efficient. <br> -> Cost per watt can range from 2.90 to 3.40 USD depending on what state you live in ($2.93 in NJ) <br> -> If you owe federal taxes during the year you get solar panels installed, you are awarded a tax deduction equal to 30% of the cost of installation. </p>
+                        <form id="quoteForm">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" id="electricityUsage" placeholder="Electricity Usage (kWh/month)" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" id="electricalBill" placeholder="Electrical bill/month" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" id="panelEfficiency" placeholder="Solar Panel Efficiency (in %)" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <input type="text" class="form-control border-0" id="costPerWatt" placeholder="Cost Per Watt" style="height: 55px;">
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                
+                                      <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" id="federalTaxCut">
+                                          <label class="form-check-label" for="federalTaxCut">
+                                              Are you eligible for the federal tax cut?
+                                          </label>
+                                      </div>
+                                 
+                                                                    </div>
+                                                                    <div class="col-12">
+                                                                      
+                                                                        <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" onclick="calculateCost();return false;">Submit</button>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                            <div id="totalCostResult" class="mt-4"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Quote End -->
+
+  <!-- Quote Start -->
+  <div class="container-fluid bg-light overflow-hidden px-lg-0" style="margin: 6rem 0;">
+      <div class="container quote px-lg-0">
+          <div class="row g-0 mx-lg-0">
+              <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
+                  <div class="position-relative h-100">
+                      <img class="position-absolute img-fluid w-100 h-100" src="img/windturbines2.jpg" style="object-fit: cover;" alt="">
+                  </div>
+              </div>
+              <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                  <div class="p-lg-5 pe-lg-0">
+                      <h6 class="text-primary">Free Wind Turbine Quote</h6>
+                      <h1 class="mb-4">Get A Free Quote!</h1>
+                      <p class="mb-4 pb-2">Enter the following fields to get your estimated wind turbine installation cost. <br> Note: <br> -> Wind speed is the average wind speed at your location. The average in New Jersey is approximately 6.5 m/s <br> -> Efficiency represents the wind turbine's efficiency in converting wind energy to electricity. <br> -> Cost per kW can vary based on the turbine model, size, and other factors. It can be around 700 - 850 dollars </p>
+                      <form id="quoteForm">
+                          <div class="row g-3">
+                              <div class="col-12 col-sm-6">
+                                  <input type="text" class="form-control border-0" id="windSpeed" placeholder="Wind Speed (m/s)" style="height: 55px;">
+                              </div>
+                            <div class="col-12 col-sm-6">
+                                <input type="text" class="form-control border-0" id="monthlyBill" placeholder="Monthly Electrical Bill" style="height: 55px;">
+                            </div>
+                              <div class="col-12 col-sm-6">
+                                  <input type="text" class="form-control border-0" id="efficiency" placeholder="Efficiency (%) - 30-50%" style="height: 55px;">
+                              </div>
+                              <div class="col-12 col-sm-6">
+                                  <input type="text" class="form-control border-0" id="costPerKW" placeholder="Cost Per kW" style="height: 55px;">
+                              </div>
+                              <div class="col-12">
+                                  <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" id="federalTaxCut">
+                                      <label class="form-check-label" for="federalTaxCut">
+                                          Are you eligible for the federal tax cut?
+                                      </label>
+                                  </div>
+                              </div>
+                              <div class="col-12">
+                                  <button class="btn btn-primary rounded-pill py-3 px-5" type="submit" onclick="calculateCost2();return false;">Submit</button>
+                              </div>
+                          </div>
+                      </form>
+                      <div id="totalCostRes" class="mt-4"></div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Quote End -->
+
+  <!-- Feature Start -->
+  <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
+      <div class="container feature px-lg-0">
+          <div class="row g-0 mx-lg-0">
+              <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.1s">
+                  <div class="p-lg-5 ps-lg-0">
+                      <h6 class="text-primary">Asking where you specifically can go green?</h6>
+                      <h1 class="mb-4">Calculate your Carbon Footprint!</h1>
+                      <p class="mb-4 pb-2">Answer questions relating to your demographics, lifestyle choices, energy usage habits, and more to figure out where you can go green. <a class="small fw-medium" <a class="small fw-medium" href="https://www.footprintcalculator.org/home/en" target="_blank" rel="noopener noreferrer">Click Me</a>  to Find Out!</p>
+
+                      <div class="row g-4">
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="btn-lg-square bg-primary rounded-circle">
+                                      <i class="fa fa-check text-white"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-0">Quality</p>
+                                      <h5 class="mb-0">Results</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="btn-lg-square bg-primary rounded-circle">
+                                      <i class="fa fa-user-check text-white"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-0">Trusted</p>
+                                      <h5 class="mb-0">Organization</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="btn-lg-square bg-primary rounded-circle">
+                                      <i class="fa fa-drafting-compass text-white"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-0">Free</p>
+                                      <h5 class="mb-0">Access</h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="d-flex align-items-center">
+                                  <div class="btn-lg-square bg-primary rounded-circle">
+                                      <i class="fa fa-headphones text-white"></i>
+                                  </div>
+                                  <div class="ms-4">
+                                      <p class="mb-0">User</p>
+                                      <h5 class="mb-0">Friendly</h5>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-6 pe-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
+                  <div class="position-relative h-100">
+                      <img class="position-absolute img-fluid w-100 h-100" src="img/carbonfootprint.png" style="object-fit: cover;" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Feature End -->
+
+
+                                      <!-- Footer Start -->
+                                      <div class="container-fluid bg-dark text-body footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+                                          <div class="container py-5">
+                                              <div class="row g-5">
+                                                  <div class="col-lg-3 col-md-6">
+                                                      <h5 class="text-white mb-4">Address</h5>
+                                                      <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>100 Technology Dr, Edison, NJ 08837</p>
+                                                      <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(732) 452-2600</p>
+                                                      <p class="mb-2"><i class="fa fa-envelope me-3"></i>ecoenergysolutions@green.net</p>
+                                                      <div class="d-flex pt-2">
+                                                          <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                                                          <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                                                          <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                                                          <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-lg-3 col-md-6">
+                                                      <h5 class="text-white mb-4">Quick Links</h5>
+                                                      <a class="btn btn-link" href="index.html">Home</a>
+                                                      <a class="btn btn-link" href="solutions.html">Solutions</a>
+                                                      <a class="btn btn-link" href="practice.html">Practices</a>
+                                                      <a class="btn btn-link" href="incentivesandrebates.html">Incentives and Rebates</a>
+                                                      <a class="btn btn-link" href="costcalculator.html">Cost Calculator</a>
+                                                      <a class="btn btn-link" href="resources.html">Resources</a>
+                                                      <a class="btn btn-link" href="contact.html">Contact Us</a>
+                                                  </div>
+                                                  <div class="col-lg-3 col-md-6">
+                                                      <h5 class="text-white mb-4">Project Gallery</h5>
+                                                      <div class="row g-2">
+                                                          <div class="col-4">
+                                                              <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="">
+                                                          </div>
+                                                          <div class="col-4">
+                                                              <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="">
+                                                          </div>
+                                                          <div class="col-4">
+                                                              <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="">
+                                                          </div>
+                                                          <div class="col-4">
+                                                              <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="">
+                                                          </div>
+                                                          <div class="col-4">
+                                                              <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="">
+                                                          </div>
+                                                          <div class="col-4">
+                                                              <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="">
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="col-lg-3 col-md-6">
+                                                      <h5 class="text-white mb-4">Newsletter</h5>
+                                                      <p>Feel free to sign up for our newsletter.</p>
+                                                      <div class="position-relative mx-auto" style="max-width: 400px;">
+                                                          <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                                                          <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                                                      </div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <div class="container">
+                                              <div class="copyright">
+                                                  <div class="row">
+                                                      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                                                          &copy; <a href="#">EcoEnergy Solutions</a>, All Right Reserved.
+                                                      </div>
+                                                      <div class="col-md-6 text-center text-md-end">
+                                                          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                                                        Designed By <a href="https://htmlcodex.com">NJTSA</a>
+                                                        <br>Distributed By: <a href="https://themewagon.com" target="_blank">Bootstrap</a>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        </div>
+                                                        <!-- Footer End -->
+
+
+                                                        <!-- Back to Top -->
+                                                        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+                                                        <!-- JavaScript Libraries -->
+                                                        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+                                                        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+                                                        <script src="lib/wow/wow.min.js"></script>
+                                                        <script src="lib/easing/easing.min.js"></script>
+                                                        <script src="lib/waypoints/waypoints.min.js"></script>
+                                                        <script src="lib/counterup/counterup.min.js"></script>
+                                                        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+                                                        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+                                                        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+                                                        <!-- Template Javascript -->
+                                                        <script src="js/main.js"></script>
+
+                                                        <!-- Custom Script -->
+                                                        <script>
+                                                          function calculateCost() {
+                                                            
+  var sunlightHours = 12                                       // Get user inputs
+                                                            
+                                                              var electricityUsage = parseFloat(document.getElementById("electricityUsage").value); // in kWh/month
+                                                            
+                                                              var electricalBill = parseFloat(document.getElementById("electricalBill").value); // hours/day
+                                                              var panelEfficiency = parseFloat(document.getElementById("panelEfficiency").value); // efficiency ratio
+                                                              var costPerWatt = parseFloat(document.getElementById("costPerWatt").value); // cost per watt
+                                                             var taxCutEligible = document.getElementById("federalTaxCut").checked;
+                                                              var laborCostPercentage = 0.1; // 10% of the total labor cost
+
+                                                              // Convert electricity usage to watts (since 1 kWh = 1000 watts)
+                                                              var electricityUsageWatts = electricityUsage * 1000; // in watts
+
+                                                              // Calculate monthly electricity production of the solar panel system
+                                                              var systemSize = electricityUsageWatts / (sunlightHours * panelEfficiency).toFixed(2); // in watts
+                                                             
+
+                                                              // Calculate system size (assuming average sunlight hours per day)
+                                                             
+
+                                                              // Calculate total cost
+                                                              var totalCost = systemSize * costPerWatt; // labor cost will be added later
+
+                                                              // Calculate labor cost (10% of the total cost)
+                                                              var laborCost = totalCost * laborCostPercentage;
+
+                                                            
+
+                                                              // Add labor cost to the total cost
+                                                              totalCost += laborCost;
+
+  if (taxCutEligible == true) {
+    totalCost *= 0.70;
+  }
+ 
+                                                            dollarPerkWh = (electricalBill/electricityUsage);                                                          
+savedCost = (electricalBill * 240) - totalCost;                                                          
+                                                      
+
+                                                              // Display result
+                                                              document.getElementById("totalCostResult").innerHTML = "<h4>Total Installation Cost: $" + totalCost.toFixed(2) + " </h4>" + "<br>" + "<h4> Estimated savings after 20 years $" + savedCost.toFixed(2);
+
+                                                    
+                                                          }
+                                                        function calculateCost2() {
+
+                                                          // Get user inputs
+var windSpeed = parseFloat(document.getElementById("windSpeed").value); // in kWh/month
+                                                          var monthlyBill = parseFloat(document.getElementById("monthlyBill").value);
+                                                             var efficiency = parseFloat(document.getElementById("efficiency").value); // hours/day
+                                                          var costPerKW = parseFloat(document.getElementById("costPerKW").value); // efficiency ratio
+ 
+                                                                                                                     var taxCutEligible = document.getElementById("federalTaxCut").checked;
+                                                                                                                      var laborCostPercentage = 0.1; // 10% of the total labor cost
+
+                                                                                                                      // Calculate labor cost (10% of the total cost)
+       
+var totalCost = (((windSpeed * efficiency * 0.01 * 24 * 365) / 1000) * costPerKW);                                                
+                                                          var laborCost = totalCost * laborCostPercentage;
+
+
+
+                                                                                                                      // Add labor cost to the total cost
+                                                                                                                      totalCost += laborCost;
+
+                                                          if (taxCutEligible == true) {
+                                                            totalCost *= 0.70;
+                                                          }
+
+ totalSaved = (monthlyBill * 240) - totalCost;
+                                                        //                                                          
+
+
+                                                                                                                      // Display result
+                                                                                                                      document.getElementById("totalCostRes").innerHTML = "<h4>Total Installation Cost: $" + totalCost.toFixed(2) + " </h4>" + "<br>" + "<h4> Estimated savings after 20 years $" + totalSaved.toFixed(2);
+
+
+                                                                                                                  }
+</script>
+                                                        </body>
+
+                                                        </html>
